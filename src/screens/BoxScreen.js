@@ -3,46 +3,38 @@ import { View, Text, StyleSheet } from "react-native";
 
 const BoxScreen = () => {
   return (
-    <View style={styles.viewStyle}>
-      <Text style={styles.textOneStyle}>Child #1</Text>
-      <Text style={styles.textTwoStyle}>Child #2</Text>
-      <Text style={styles.textThreeStyle}>Child #3</Text>
+    <View style={styles.parentStyle}>
+      <View style={styles.viewOneStyle} />
+      <View style={styles.viewTwoStyle} />
+      <View style={styles.viewThreeStyle} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  viewStyle: {
+  parentStyle: {
     borderWidth: 3,
     borderColor: "black",
-    height: 200,
-    alignItems: "stretch"
-    // flexDirection:'row'
-    //alignContent:"center",
-    //alignSelf="flex-end",
+    height: 100,
+    flexDirection: "row",
+    justifyContent: "space-between"
   },
-  textOneStyle: {
-    borderWidth: 3,
-    borderColor: "red"
-    //flex:4,
+  viewOneStyle: {
+    height: 50,
+    width: 50,
+    backgroundColor: "red"
   },
-  textTwoStyle: {
-    borderWidth: 3,
-    borderColor: "red",
-    //flex:4,
-    // alignSelf:'stretch',
-    //     position:'absolute',
-    //     fontSize:18,
-    //     top :0,
-    //     bottom:0,
-    //     left:0,
-    //     right:0,
-    ...StyleSheet.absoluteFillObject
+  viewTwoStyle: {
+    height: 50,
+    width: 50,
+    backgroundColor: "green",
+    marginTop: 50,
+    alignSelf:'flex-end'
   },
-  textThreeStyle: {
-    borderWidth: 3,
-    borderColor: "red"
-    //flex:1
+  viewThreeStyle: {
+    height: 50,
+    width: 50,
+    backgroundColor: "purple"
   }
 });
 
