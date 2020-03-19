@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   parentStyle: {
     borderWidth: 3,
     borderColor: "black",
-    height: 100,
+    height: 200,
     flexDirection: "row",
     justifyContent: "space-between"
   },
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     width: 50,
     backgroundColor: "green",
     marginTop: 50,
-    alignSelf:'flex-end'
+    //alignSelf:'flex-end'
   },
   viewThreeStyle: {
     height: 50,
