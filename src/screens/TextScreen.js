@@ -16,6 +16,7 @@ const TextScreen = () => {
         onChangeText={newValue=>setName(newValue)}
       />
       <Text >My name is {name}</Text>
+      {name!="" ? <Text>That was true</Text>: null}
     </View>
   );
 };
